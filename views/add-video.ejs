@@ -1,0 +1,30 @@
+<%- include('partials/header-admin') %>
+
+<main class="form-center">
+  <form action="/add-video/<%= categoryId %>" method="post">
+    <h1 class="h3 mb-3 fw-normal">Přidat video</h1>
+
+    <div class="form-group">
+      <label>První video</label>
+      <input type="video1Title" name="video1Title" class="form-control" placeholder="Titulek" autocomplete="off">
+      <input type="video1URL" name="video1URL" class="form-control" placeholder="URL (Embed!)" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label>Druhé video</label>
+      <input type="video2Title" name="video2Title" class="form-control" placeholder="Titulek" autocomplete="off">
+      <input type="video2URL" name="video2URL" class="form-control" placeholder="URL (Embed!)">
+    </div>
+    <div class="form-group">
+      <label>Třetí video</label>
+      <input type="video3Title" name="video3Title" class="form-control" placeholder="Titulek" autocomplete="off">
+      <input type="video3URL" name="video3URL" class="form-control" placeholder="URL (Embed!)" autocomplete="off">
+    </div>
+
+    <div class="my-4">
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Uložit</button>
+    </div>
+
+  </form>
+</main>
+
+<%- include('partials/footer-admin') %>

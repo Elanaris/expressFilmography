@@ -1,0 +1,204 @@
+body {
+  background-color: #212121;
+  color: #FFFCFA;
+  text-align: center;
+  font-family: "Mulish";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  font-family: "Baskervville"
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+hr {
+  margin-top: 1%;
+}
+
+/* Coloured Sections */
+.section-white {
+  background-color: #FFFCFA;
+  color: #1b1b1b;
+}
+
+/* Section Padding */
+.section {
+  padding: 5% 10%
+}
+
+/* Buttons */
+.btn {
+  font-size: 1.1rem;
+}
+
+.btn-outline-dark, .btn-outline-light:hover {
+  color: #1b1b1b;
+  background-color: #FFFCFA;
+}
+
+.btn-outline-light, .btn-outline-dark:hover {
+  color: #FFFCFA;
+  background-color: #212121;
+}
+
+/* Main Title */
+#main-title {
+  padding: 3% 0 0 0;
+}
+
+.title {
+  font-family: "Cinzel";
+}
+
+/* Navbar */
+#header {
+  padding: 0 15% 0 15%;
+}
+
+.navbar .navbar-brand, .navbar .nav-item .nav-link {
+  color: #FFFCFA;
+  font-size: 1.1rem;
+  font-family: "Mulish";
+  font-weight: normal;
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.sticky-top {
+  background-color: rgb(33, 33, 33);
+  background-color: rgba(33, 33, 33, 0.7);
+}
+
+/* Top Image */
+#top-img {
+  padding-top: 3%;
+}
+
+/* Info Section */
+#info {
+  padding: 7% 25%;
+}
+
+/* Film Previews */
+#film-previews {
+  padding: 5% 7%;
+}
+
+#film-preview-title {
+  padding: 3% 0 3% 0;
+}
+
+#film-previews .col-lg-6 {
+  padding: 3%;
+}
+
+.video-comment-text {
+  padding: 5% 0;
+}
+
+/* Contact */
+#contact p {
+  padding-top: 5%;
+}
+
+.contact-form button:focus {
+  box-shadow: none;
+}
+
+#contact label, #contact .col-sm-12 {
+  padding-top: 3%;
+}
+
+#status {
+  padding-top: 3%;
+  font-size: 1.1rem;
+}
+
+/* Follow Me */
+#follow p {
+  padding: 5% 0;
+}
+
+#follow a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #1b1b1b;
+  transition: opacity 0.2s;
+}
+
+#follow a:hover {
+  opacity: 0.7;
+}
+
+#follow i {
+  font-size: 3.5rem;
+}
+
+#follow .row {
+  padding: 0 20%;
+}
+
+/* Icons */
+.fa-facebook-square {
+  color: #4267B2;
+}
+
+.fa-youtube {
+  color: #FF0000;
+}
+
+.fa-instagram-square {
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Footer */
+footer {
+  color: #D3D3D3;
+  padding: 2.5% 7%;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* About Me Page */
+.divider {
+  padding-top: 3%;
+  background-color: #212121;
+}
+
+#about-me-text {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media only screen and (min-width: 1000px) {
+  #about-me {
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  #about-me-text {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+}
+
+#gear .col-lg-6 {
+  padding-top: 5%;
+}
+
+#gear h2 {
+  padding-bottom: 3%;
+}

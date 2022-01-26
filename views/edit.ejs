@@ -1,0 +1,28 @@
+<%- include('partials/header-admin') %>
+
+<main class="form-center">
+  <form action="/edit/<%= category._id %>" method="post">
+    <h1 class="h3 mb-3 fw-normal">Upravit kategorii</h1>
+
+    <div class="form-group">
+      <label>Kategorie</label>
+      <input type="name" name="name" class="form-control" placeholder="Název" value="<%= category.name %>" autocomplete="off">
+      <input type="description" name="description" class="form-control" placeholder="Popisek" value="<%= category.description %>" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label>Ukázka (Embed URL)</label>
+      <input type="previewURL" name="previewURL" class="form-control" placeholder="Odkaz (Embed!)" value="<%= category.previewURL %>" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label>Pořadí kategorie (bez tečky)</label>
+      <input type="orderNumber" name="orderNumber" class="form-control" placeholder="(číslo bez tečky)" value="<%= category.orderNumber %>" autocomplete="off">
+    </div>
+
+    <div class="my-4">
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Uložit</button>
+    </div>
+
+  </form>
+</main>
+
+<%- include('partials/footer-admin') %>

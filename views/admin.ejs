@@ -1,0 +1,39 @@
+<%- include('partials/header-admin') %>
+
+
+
+<div class="container">
+
+<% for (category of categories) { %>
+
+  <div class="row m-1">
+    <h1><%= category.name %> (<%= category.orderNumber %>.)</h1>
+  </div>
+  <a href="/add-video/<%= category._id %>"><button class="btn btn-lg btn-success m-2">Přidat videa</button></a>
+  <a href="/edit/<%= category._id %>"><button class="btn btn-lg btn-primary m-2">Upravit kategorii</button></a>
+
+  <a href="/delete/<%= category._id %>"><button class="btn btn-lg btn-danger m-2">Smazat kategorii</button></a>
+
+  <div class="row my-5">
+
+  <% for (video of category.videos) { %>
+    <div class="col col-lg-3 col-md-6 col-sm-12 my-2">
+      <h5><%= video.title %></h5>
+      <div class="ratio ratio-16x9">
+        <%- video.url %>
+      </div>
+
+      <a href="/delete-video/<%= category._id %>/<%= video._id %>"><button class="btn btn-lg btn-danger m-2">Smazat</button></a>
+
+    </div>
+  <% } %>
+
+  </div>
+
+<% } %>
+
+</div>
+
+
+
+<%- include('partials/footer-admin') %>

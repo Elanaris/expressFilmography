@@ -1,0 +1,46 @@
+<%- include('partials/header') %>
+
+<div class="divider"></div>
+
+<div class="container-fluid section section-white">
+  <h1>Podívejte se</h1>
+  <p class="my-4">
+    Vybraná videa seřazená podle kategorií. Pokud se vám líbí a chcete mít své vlastní, kontaktujte mě.
+  </p>
+  <% for (category of categories) { %>
+    <a href="/videos/#<%= category._id %>"><button class="btn btn-lg btn-outline-dark m-2"><%= category.name %></button></a>
+  <% } %>
+</div>
+
+<div class="container-fluid pb-5">
+
+<% for (category of categories) { %>
+
+
+  <div id="<%= category.id %>" class="row w-75 mx-auto my-5 py-5">
+    <h2><%= category.name %></h2>
+    <p class="my-4">
+      <%= category.description %>
+    </p>
+  </div>
+
+
+
+  <div class="row justify-content-center my-4">
+
+  <% for (video of category.videos) { %>
+    <div class="col col-lg-4 col-md-6 col-sm-12 my-4">
+      <h5><%= video.title %></h5>
+      <div class="ratio ratio-16x9">
+        <%- video.url %>
+      </div>
+    </div>
+  <% } %>
+
+  </div>
+<hr />
+<% } %>
+
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,139 @@
+<%- include('partials/header-admin') %>
+
+<div class="m-5">
+
+  <div class="row mx-5">
+    <div class="col-lg-12 mb-1">
+      <h1>Upravit text na webu</h1>
+    </div>
+
+    <div class="col-lg-6 my-4">
+      <h4>Název stránky a zápatí</h4>
+      <form action="/edit-web" method="post">
+      <div class="form-group w-75 mx-auto">
+        <label>Název</label>
+        <input name="webName" class="form-control" value="<%= data.webName %>" autocomplete="off">
+        <label>Zápatí</label>
+        <input name="footer" class="form-control" value="<%= data.footer %>" autocomplete="off">
+        <div class="my-4">
+          <button class="w-50 btn btn-lg btn-primary" type="submit">Uložit</button>
+        </div>
+      </div>
+      </form>
+    </div>
+
+    <div class="col-lg-6 my-4">
+      <h4>Stránka Domů</h4>
+      <form action="/edit-web" method="post">
+      <div class="form-group w-75 mx-auto">
+        <label>Úvodní foto - panorama (běžná URL)</label>
+        <input name="bgImage" class="form-control" value="<%= data.bgImage %>" autocomplete="off">
+        <label>Info odstavec</label>
+        <textarea name="infoText" class="form-control" autocomplete="off"><%= data.infoText %></textarea>
+        <label>Ukázky videí - titulek</label>
+        <input name="previewsTitle" class="form-control" value="<%= data.previewsTitle %>" autocomplete="off">
+        <label>Ukázky videí - menu položka</label>
+        <input name="previewsMenu" class="form-control" value="<%= data.previewsMenu %>" autocomplete="off">
+        <label>Kontakt - nadpis</label>
+        <input name="contactTitle" class="form-control" value="<%= data.contactTitle %>" autocomplete="off">
+        <label>Kontakt - podnadpis</label>
+        <input name="contactText" class="form-control" value="<%= data.contactText %>" autocomplete="off">
+        <div class="my-4">
+          <button class="w-50 btn btn-lg btn-primary" type="submit">Uložit</button>
+        </div>
+      </div>
+      </form>
+    </div>
+
+    <div class="col-lg-6 my-4">
+      <h4>O mně</h4>
+      <form action="/edit-web" method="post">
+      <div class="form-group w-75 mx-auto">
+        <label>Text</label>
+        <textarea name="aboutText" class="form-control" autocomplete="off"><%= data.aboutText %></textarea>
+        <label>Foto (běžná URL)</label>
+        <input name="aboutImage" class="form-control" value="<%= data.aboutImage %>" autocomplete="off">
+        <div class="my-4">
+          <button class="w-50 btn btn-lg btn-primary" type="submit">Uložit</button>
+        </div>
+      </div>
+      </form>
+    </div>
+
+    <div class="col-lg-6 my-4">
+      <h4>Vybavení - odstavec 1</h4>
+      <form action="/edit-web" method="post">
+      <div class="form-group w-75 mx-auto">
+        <label>Titulek</label>
+        <input name="gear1Title" class="form-control" value="<%= data.gear1Title %>" autocomplete="off">
+        <label>Text</label>
+        <textarea name="gear1Text" class="form-control" autocomplete="off"><%= data.gear1Text %></textarea>
+        <label>Foto (běžná URL)</label>
+        <input name="gear1Image" class="form-control" value="<%= data.gear1Image %>" autocomplete="off">
+        <div class="my-4">
+          <button class="w-50 btn btn-lg btn-primary" type="submit">Uložit</button>
+        </div>
+      </div>
+      </form>
+    </div>
+
+    <div class="col-lg-6 my-4">
+      <h4>Vybavení - odstavec 2</h4>
+      <form action="/edit-web" method="post">
+      <div class="form-group w-75 mx-auto">
+        <label>Titulek</label>
+        <input name="gear2Title" class="form-control" value="<%= data.gear2Title %>" autocomplete="off">
+        <label>Text</label>
+        <textarea name="gear2Text" class="form-control" autocomplete="off"><%= data.gear2Text %></textarea>
+        <label>Foto (běžná URL)</label>
+        <input name="gear2Image" class="form-control" value="<%= data.gear2Image %>" autocomplete="off">
+        <div class="my-4">
+          <button class="w-50 btn btn-lg btn-primary" type="submit">Uložit</button>
+        </div>
+      </div>
+      </form>
+    </div>
+
+    <div class="col-lg-6 my-4">
+      <h4>Vybavení - odstavec 3</h4>
+      <form action="/edit-web" method="post">
+      <div class="form-group w-75 mx-auto">
+        <label>Titulek</label>
+        <input name="gear3Title" class="form-control" value="<%= data.gear3Title %>" autocomplete="off">
+        <label>Text</label>
+        <textarea name="gear3Text" class="form-control" autocomplete="off"><%= data.gear3Text %></textarea>
+        <label>Foto (běžná URL)</label>
+        <input name="gear3Image" class="form-control" value="<%= data.gear3Image %>" autocomplete="off">
+        <div class="my-4">
+          <button class="w-50 btn btn-lg btn-primary" type="submit">Uložit</button>
+        </div>
+      </div>
+      </form>
+    </div>
+
+    <div class="col-lg-6 my-4">
+      <h4>Sociální sítě</h4>
+      <form action="/edit-web" method="post">
+      <div class="form-group w-75 mx-auto">
+        <label>Titulek</label>
+        <input name="socialsTitle" class="form-control" value="<%= data.socialsTitle %>" autocomplete="off">
+        <label>Text</label>
+        <textarea name="socialsText" class="form-control" autocomplete="off"><%= data.socialsText %></textarea>
+        <label>Facebook (běžná URL)</label>
+        <input name="socialsFB" class="form-control" value="<%= data.socialsFB %>" autocomplete="off">
+        <label>YouTube (běžná URL)</label>
+        <input name="socialsYT" class="form-control" value="<%= data.socialsYT %>" autocomplete="off">
+        <label>Instagram (běžná URL)</label>
+        <input name="socialsIG" class="form-control" value="<%= data.socialsIG %>" autocomplete="off">
+        <div class="my-4">
+          <button class="w-50 btn btn-lg btn-primary" type="submit">Uložit</button>
+        </div>
+      </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+
+<%- include('partials/footer-admin') %>

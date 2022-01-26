@@ -1,0 +1,97 @@
+<%- include('partials/header') %>
+
+  <div class="divider"></div>
+
+  <!-- About Me -->
+  <div id="about-me" class="section-white">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12">
+        <img id="about-me-img" src="<%= data.aboutText %>" class="img-fluid">
+      </div>
+      <div id="about-me-text" class="col my-auto">
+        <p>
+          <%= data.aboutText %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Equipment -->
+  <div id="gear" class="container-fluid section">
+    <h1>Vybavení</h1>
+    <div class="row">
+      <div class="col-lg-6 align-self-center">
+        <div class="ratio" style="--bs-aspect-ratio: 65%;">
+          <img src="<%= data.gear1Image %>" width="700"/>
+        </div>
+      </div>
+      <div class="col-lg-6 align-self-center">
+        <h2><%= data.gear1Title %></h2>
+        <p>
+          <%= data.gear1Text %>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 align-self-center order-lg-2">
+        <div class="ratio ratio-16x9">
+          <img src="<%= data.gear2Image %>" width="700"/>
+        </div>
+      </div>
+      <div class="col-lg-6 align-self-center">
+        <h2><%= data.gear2Title %></h2>
+        <p>
+          <%= data.gear2Text %>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 align-self-center">
+        <div class="ratio" style="--bs-aspect-ratio: 75%;">
+          <img src="<%= data.gear3Image %>" width="700"/>
+        </div>
+      </div>
+      <div class="col-lg-6 align-self-center">
+        <h2><%= data.gear3Title %></h2>
+        <p>
+          <%= data.gear3Text %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- More About Me -->
+  <div id="follow" class="container-fluid section section-white">
+    <h1><%= data.socialsTitle %></h1>
+      <p>
+        <%= data.socialsText %>
+      </p>
+      <div class="row">
+        <div class="col">
+          <a href="<%= data.socialsFB %>" target="_blank">
+            <i class="fab fa-facebook-square"></i>
+            <p>
+              Facebook
+            </p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="<%= data.socialsYT %>" target="_blank">
+            <i class="fab fa-youtube"></i>
+            <p>
+              YouTube
+            </p>
+        </a>
+        </div>
+        <div class="col">
+          <a href="<%= data.socialsIG %>" target="_blank">
+            <i class="fab fa-instagram-square"></i>
+            <p>
+              Instagram
+            </p>
+          </a>
+        </div>
+      </div>
+  </div>
+
+<%- include('partials/footer') %>

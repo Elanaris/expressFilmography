@@ -1,0 +1,137 @@
+<%- include('partials/header') %>
+
+  <!-- Header Image -->
+  <img id="top-img" src="<%= data.bgImage %>" class="img-fluid">
+
+  <!-- Info About Me -->
+  <div id="info" class="container-fluid">
+    <p>
+      <%= data.infoText %>
+    </p>
+  </div>
+
+  <!-- Film Previews -->
+  <div id="film-previews" class="container-fluid section-white">
+
+    <h1 id="film-preview-title">
+      <%= data.previewsTitle %>
+    </h1>
+
+    <% let i = 1; %>
+    <% for (category of categories) { %>
+      <% if (i % 2 === 0) { %>
+
+        <div class="row">
+          <div class="col-lg-6 align-self-center order-2">
+              <h2 class="video-comment-title"><%= category.name %></h2>
+              <p class="video-comment-text">
+                <%= category.description %>
+              </p>
+              <a href="/videos#<%= category._id %>" target="_blank">
+                <button class="btn btn-outline-dark" type="button" name="button">Další videa</button>
+              </a>
+          </div>
+          <div class="col-lg-6 align-self-center order-lg-2">
+            <div class="ratio ratio-16x9">
+              <iframe width="700" src="https://www.youtube.com/embed/teLhLLlhfzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+      <% } else { %>
+
+        <div class="row">
+
+          <div class="col-lg-6 align-self-center">
+
+            <div class="ratio ratio-16x9">
+              <iframe width="700" src="https://www.youtube.com/embed/teLhLLlhfzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-6 align-self-center">
+
+              <h2 class="video-comment-title"><%= category.name %></h2>
+              <p class="video-comment-text">
+                <%= category.description %>
+              </p>
+              <a href="/videos#<%= category._id %>">
+                <button class="btn btn-outline-dark" type="button" name="button">Další videa</button>
+              </a>
+          </div>
+        </div>
+
+      <% } %>
+    <% i++; %>
+    <% } %>
+
+  </div>
+
+  <!-- Contact -->
+  <div id="contact" class="section">
+	<div class="row">
+		<div class="col-lg-6 d-flex align-items-center justify-content-center">
+			<div class="contact-info">
+				<img src="https://image.ibb.co/kUASdV/contact-image.png"/>
+				<h1><%= data.contactTitle %></h1>
+				<p><%= data.contactText %></p>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<form id="contact-form" name="contact-form" action="/contact" method="POST">
+				  <label class="control-label" for="name">Vaše jméno:</label>
+					<input type="text" class="form-control" id="name" placeholder="Napište vaše jméno" name="name">
+
+				  <label class="control-label" for="email">Váš e-mail:</label>
+					<input type="email" class="form-control" id="email" placeholder="Napište váš e-mail" name="email">
+
+				  <label class="control-label" for="subject">O jakou jde událost?</label>
+					<input type="text" class="form-control" id="subject" placeholder="Napište typ události (např. svatba, firemní večírek, ples)" name="subject">
+
+				  <label class="control-label" for="message">Zpráva pro mě:</label>
+					<textarea type="text" class="form-control" rows="5" id="message" placeholder="Uveďte podrobnosti." name="message"></textarea>
+
+          <div class="col-sm-12">
+  					<button id="submit" type="submit" class="btn btn-outline-light" onclick="validateForm()">Odeslat</button>
+          </div>
+          <div id="status"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+  <!-- More About Me -->
+  <div id="follow" class="container-fluid section section-white">
+    <h1><%= data.socialsTitle %></h1>
+      <p>
+        <%= data.socialsText %>
+      </p>
+      <div class="row">
+        <div class="col">
+          <a href="<%= data.socialsFB %>" target="_blank">
+            <i class="fab fa-facebook-square"></i>
+            <p>
+              Facebook
+            </p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="<%= data.socialsYT %>" target="_blank">
+            <i class="fab fa-youtube"></i>
+            <p>
+              YouTube
+            </p>
+        </a>
+        </div>
+        <div class="col">
+          <a href="<%= data.socialsIG %>" target="_blank">
+            <i class="fab fa-instagram-square"></i>
+            <p>
+              Instagram
+            </p>
+          </a>
+        </div>
+      </div>
+  </div>
+
+<%- include('partials/footer') %>

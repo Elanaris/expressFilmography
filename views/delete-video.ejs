@@ -1,0 +1,17 @@
+<%- include('partials/header-admin') %>
+
+<main class="form-center">
+  <form action="/delete-video/<%= category._id %>/<%= videoId %>" method="post">
+    <h1 class="h3 mb-3 fw-normal">Opravdu smazat video z kategorie <%= category.name %>?</h1>
+
+    <div class="my-4">
+      <button class="btn btn-lg btn-danger m-2" type="submit">Smazat video</button>
+
+    </div>
+  </form>
+  <div class="my-4">
+    <a href="/admin"><button class="btn btn-lg btn-primary m-2">Zrušit</button></a>
+  </div>
+</main>
+
+<%- include('partials/footer-admin') %>

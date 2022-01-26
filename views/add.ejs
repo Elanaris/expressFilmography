@@ -1,0 +1,45 @@
+<%- include('partials/header-admin') %>
+
+
+
+<main class="form-center">
+  <form action="/add" method="post">
+    <h1 class="h3 mb-3 fw-normal">Přidat kategorii</h1>
+
+    <div class="form-group">
+      <label>Kategorie</label>
+      <input type="name" name="name" class="form-control" placeholder="Název" autocomplete="off">
+      <input type="description" name="description" class="form-control" placeholder="Popisek" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label>Ukázka (Embed URL)</label>
+      <input type="previewURL" name="previewURL" class="form-control" placeholder="Odkaz (Embed!)" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label>Pořadí kategorie (bez tečky)</label>
+      <input type="orderNumber" name="orderNumber" class="form-control" placeholder="(číslo bez tečky)" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label>První video</label>
+      <input type="video1Title" name="video1Title" class="form-control" placeholder="Titulek" autocomplete="off">
+      <input type="video1URL" name="video1URL" class="form-control" placeholder="URL (Embed!)" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label>Druhé video</label>
+      <input type="video2Title" name="video2Title" class="form-control" placeholder="Titulek" autocomplete="off">
+      <input type="video2URL" name="video2URL" class="form-control" placeholder="URL (Embed!)" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label>Třetí video</label>
+      <input type="video3Title" name="video3Title" class="form-control" placeholder="Titulek" autocomplete="off">
+      <input type="video3URL" name="video3URL" class="form-control" placeholder="URL (Embed!)" autocomplete="off">
+    </div>
+
+    <div class="my-4">
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Uložit</button>
+    </div>
+
+  </form>
+</main>
+
+<%- include('partials/footer-admin') %>
